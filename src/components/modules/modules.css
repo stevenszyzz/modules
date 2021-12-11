@@ -1,0 +1,121 @@
+.modules-menu {
+    border-radius: 25px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    width: 1000px !important;
+    height: 80%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.navegacion 
+{
+   width: 80%;
+   height: 80%;
+   border-radius: 10px;
+   border-left: 5px solid #1f1f1f;
+   background: #1f1f1f;
+   transition: width 0.5s;
+}
+.navegacion.active
+{
+   width: 300px;
+}
+.navegacion  ul 
+{
+   width: 100%;
+   height: 100%;
+   padding-left: 5px;
+   padding-top: 20px;
+   overflow-y: scroll;
+}
+.navegacion ul li 
+{
+   position: relative;
+   list-style: none;
+   width: 100%;
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+}
+.navegacion ul li.active 
+{
+   background: #5526e0;
+}
+.navegacion ul li b:nth-child(1)
+{
+position: absolute;
+top: -20px;
+height: 20px;
+width: 100%;
+background: #5526e0;
+display: none;
+}
+.navegacion ul li b:nth-child(1)::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-bottom-right-radius: 20px;
+   background: #1f1f1f;
+}
+.navegacion ul li b:nth-child(2)
+{
+position: absolute;
+bottom: -20px;
+height: 20px;
+width: 100%;
+background: #5526e0;
+display: none;
+}
+.navegacion ul li b:nth-child(2)::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-top-right-radius: 20px;
+   background: #1f1f1f;
+}
+.navegacion ul li.active b:nth-child(1),
+.navegacion ul li.active b:nth-child(2)
+{
+   display: block;
+}
+.navegacion ul li a
+{
+position: relative;
+display: block;
+width: 100%;
+display: flex;
+text-decoration: none;
+color: #fff;
+}
+.navegacion ul li.active a 
+{
+   color: #fff;
+}
+.navegacion ul li a .icon
+{
+   position: relative;
+   display: block;
+   min-width: 60px;
+   height: 60px;
+   line-height: 70px;
+   text-align: center;
+   font-size: 1.5em;
+}
+.navegacion ul li a .title 
+{
+   position: relative;
+   display: block;
+   padding-left: 10px;
+   height: 60px;
+   line-height: 60px;
+   white-space: normal;
+}
